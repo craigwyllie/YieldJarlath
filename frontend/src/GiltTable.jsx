@@ -38,7 +38,9 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
                   <th
                     key={h.key}
                     onClick={() => onSort(h.key)}
-                    className="cursor-pointer whitespace-nowrap px-2.5 py-2 sm:px-3 sm:py-2.5 text-left font-semibold hover:text-slate-900"
+                    className={`cursor-pointer whitespace-nowrap px-2.5 py-2 sm:px-3 sm:py-2.5 font-semibold hover:text-slate-900 ${
+                      h.numeric ? 'text-right' : 'text-left'
+                    }`}
                   >
                     <span className="inline-flex items-center gap-1">
                       {h.label}
