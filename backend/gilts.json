@@ -1,0 +1,830 @@
+[
+  {
+    "code": "TS34",
+    "name": "41/4% Treasury Gilt 2034",
+    "isin": "GB00BQC82C90",
+    "maturity": "2034-07-31",
+    "couponRate": 0.0425,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 99.04
+  },
+  {
+    "code": "TG40",
+    "name": "4 3/8% Treasury Gilt 2040",
+    "isin": "GB00BQC82D08",
+    "maturity": "2040-01-31",
+    "couponRate": 0.04375,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 95.15
+  },
+  {
+    "code": "TG47",
+    "name": "11/2% Treasury Gilt 2047",
+    "isin": "GB00BDCHBW80",
+    "maturity": "2047-07-22",
+    "couponRate": 0.015,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 52.78
+  },
+  {
+    "code": "TG46",
+    "name": "0 7/8% Treasury Gilt 2046",
+    "isin": "GB00BNNGP775",
+    "maturity": "2046-01-31",
+    "couponRate": 0.00875,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 47.05
+  },
+  {
+    "code": "TG44",
+    "name": "31/4% Treasury Gilt 2044",
+    "isin": "GB00B84Z9V04",
+    "maturity": "2044-01-22",
+    "couponRate": 0.0325,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 78.46
+  },
+  {
+    "code": "TG41",
+    "name": "11/4 % Treasury Gilt 2041",
+    "isin": "GB00BJQWYH73",
+    "maturity": "2041-10-22",
+    "couponRate": 0.0125,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 59.98
+  },
+  {
+    "code": "TG49",
+    "name": "13/4% Treasury Gilt 2049",
+    "isin": "GB00BFWFPP71",
+    "maturity": "2049-01-22",
+    "couponRate": 0.0175,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 54.3
+  },
+  {
+    "code": "TS29",
+    "name": "4 1/8% Treasury Gilt 2029",
+    "isin": "GB00BQC82B83",
+    "maturity": "2029-07-22",
+    "couponRate": 0.04125,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 100.98
+  },
+  {
+    "code": "TS28",
+    "name": "41/2% Treasury Gilt 2028",
+    "isin": "GB00BMF9LG83",
+    "maturity": "2028-06-07",
+    "couponRate": 0.045,
+    "couponMonths": [
+      6,
+      12
+    ],
+    "cleanPrice": 101.78
+  },
+  {
+    "code": "TS27",
+    "name": "33/4% Treasury Gilt 2027",
+    "isin": "GB00BPSNB460",
+    "maturity": "2027-03-07",
+    "couponRate": 0.0375,
+    "couponMonths": [
+      3,
+      9
+    ],
+    "cleanPrice": 100
+  },
+  {
+    "code": "TG37",
+    "name": "13/4% Treasury Gilt 2037",
+    "isin": "GB00BZB26Y51",
+    "maturity": "2037-09-07",
+    "couponRate": 0.0175,
+    "couponMonths": [
+      9,
+      3
+    ],
+    "cleanPrice": 73.93
+  },
+  {
+    "code": "TG35",
+    "name": "0 5/8% Treasury Gilt 2035",
+    "isin": "GB00BMGR2916",
+    "maturity": "2035-07-31",
+    "couponRate": 0.00625,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 70.21
+  },
+  {
+    "code": "T33H",
+    "name": "4 1/8% Treasury Gilt 2033",
+    "isin": "GB00BVP99780",
+    "maturity": "2033-03-07",
+    "couponRate": 0.04125,
+    "couponMonths": [
+      3,
+      9
+    ],
+    "cleanPrice": 99.36
+  },
+  {
+    "code": "TG33",
+    "name": "0 7/8% Green Gilt 2033",
+    "isin": "GB00BM8Z2S21",
+    "maturity": "2033-07-31",
+    "couponRate": 0.00875,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 78.15
+  },
+  {
+    "code": "TG32",
+    "name": "1% Treasury Gilt 2032",
+    "isin": "GB00BM8Z2T38",
+    "maturity": "2032-01-31",
+    "couponRate": 0.01,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 83.57
+  },
+  {
+    "code": "TG31",
+    "name": "01/4% Treasury Gilt 2031",
+    "isin": "GB00BMGR2809",
+    "maturity": "2031-07-31",
+    "couponRate": 0.0025,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 81.7
+  },
+  {
+    "code": "T29K",
+    "name": "4% Treasury Gilt 2029",
+    "isin": "GB00BVP99566",
+    "maturity": "2029-05-22",
+    "couponRate": 0.04,
+    "couponMonths": [
+      5,
+      11
+    ],
+    "cleanPrice": 100.47
+  },
+  {
+    "code": "TG30",
+    "name": "0 3/8% Treasury Gilt 2030",
+    "isin": "GB00BL68HH02",
+    "maturity": "2030-10-22",
+    "couponRate": 0.00375,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 84.86
+  },
+  {
+    "code": "TG38",
+    "name": "33/4% Treasury Gilt 2038",
+    "isin": "GB00BQC4R999",
+    "maturity": "2038-01-29",
+    "couponRate": 0.0375,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 91
+  },
+  {
+    "code": "TR39",
+    "name": "1 1/8% Treasury Gilt 2039",
+    "isin": "GB00BLPK7334",
+    "maturity": "2039-01-31",
+    "couponRate": 0.01125,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 64.87
+  },
+  {
+    "code": "TR38",
+    "name": "43/4% Treasury Stock 2038",
+    "isin": "GB00B00NY175",
+    "maturity": "2038-12-07",
+    "couponRate": 0.0475,
+    "couponMonths": [
+      12,
+      6
+    ],
+    "cleanPrice": 100.06
+  },
+  {
+    "code": "T35V",
+    "name": "43/4% Treasury Gilt 2035",
+    "isin": "GB00BTXS1K06",
+    "maturity": "2035-10-22",
+    "couponRate": 0.0475,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 101.82
+  },
+  {
+    "code": "TG61",
+    "name": "01/2% Treasury Gilt 2061",
+    "isin": "GB00BMBL1D50",
+    "maturity": "2061-10-22",
+    "couponRate": 0.005,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 26.21
+  },
+  {
+    "code": "TE28",
+    "name": "4 3/8% Treasury Gilt 2028",
+    "isin": "GB00BSQNRC93",
+    "maturity": "2028-03-07",
+    "couponRate": 0.04375,
+    "couponMonths": [
+      3,
+      9
+    ],
+    "cleanPrice": 101.33
+  },
+  {
+    "code": "TG65",
+    "name": "21/2% Treasury Gilt 2065",
+    "isin": "GB00BYYMZX75",
+    "maturity": "2065-07-22",
+    "couponRate": 0.025,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 55.79
+  },
+  {
+    "code": "TR43",
+    "name": "43/4% Treasury Gilt 2043",
+    "isin": "GB00BPJJKP77",
+    "maturity": "2043-10-22",
+    "couponRate": 0.0475,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 96.33
+  },
+  {
+    "code": "TR29",
+    "name": "0 7/8% Treasury Gilt 2029",
+    "isin": "GB00BJMHB534",
+    "maturity": "2029-10-22",
+    "couponRate": 0.00875,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 89.83
+  },
+  {
+    "code": "TR28",
+    "name": "6% Treasury Stock 2028",
+    "isin": "GB0002404191",
+    "maturity": "2028-12-07",
+    "couponRate": 0.06,
+    "couponMonths": [
+      12,
+      6
+    ],
+    "cleanPrice": 106.61
+  },
+  {
+    "code": "TR27",
+    "name": "41/4% Treasury Gilt 2027",
+    "isin": "GB00B16NNR78",
+    "maturity": "2027-12-07",
+    "couponRate": 0.0425,
+    "couponMonths": [
+      12,
+      6
+    ],
+    "cleanPrice": 101.21
+  },
+  {
+    "code": "TN28",
+    "name": "0 1/8% Treasury Gilt 2028",
+    "isin": "GB00BMBL1G81",
+    "maturity": "2028-01-31",
+    "couponRate": 0.00125,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 92.97
+  },
+  {
+    "code": "TG50",
+    "name": "0 5/8% Treasury Gilt 2050",
+    "isin": "GB00BMBL1F74",
+    "maturity": "2050-10-22",
+    "couponRate": 0.00625,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 37.14
+  },
+  {
+    "code": "TG57",
+    "name": "13/4% Treasury Gilt 2057",
+    "isin": "GB00BD0XH204",
+    "maturity": "2057-07-22",
+    "couponRate": 0.0175,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 47.16
+  },
+  {
+    "code": "TG53",
+    "name": "11/2% Green Gilt 2053",
+    "isin": "GB00BM8Z2V59",
+    "maturity": "2053-07-31",
+    "couponRate": 0.015,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 46.05
+  },
+  {
+    "code": "T51A",
+    "name": "11/4% Treasury Gilt 2051",
+    "isin": "GB00BLH38158",
+    "maturity": "2051-07-31",
+    "couponRate": 0.0125,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 44.41
+  },
+  {
+    "code": "TR34",
+    "name": "41/2% Treasury Gilt 2034",
+    "isin": "GB00B52WS153",
+    "maturity": "2034-09-07",
+    "couponRate": 0.045,
+    "couponMonths": [
+      9,
+      3
+    ],
+    "cleanPrice": 100.9
+  },
+  {
+    "code": "TR33",
+    "name": "31/4% Treasury Gilt 2033",
+    "isin": "GB00BMV7TC88",
+    "maturity": "2033-01-31",
+    "couponRate": 0.0325,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 94.09
+  },
+  {
+    "code": "TR32",
+    "name": "41/4% Treasury Stock 2032",
+    "isin": "GB0004893086",
+    "maturity": "2032-06-07",
+    "couponRate": 0.0425,
+    "couponMonths": [
+      6,
+      12
+    ],
+    "cleanPrice": 101.16
+  },
+  {
+    "code": "TR30",
+    "name": "43/4% Treasury Gilt 2030",
+    "isin": "GB00B24FF097",
+    "maturity": "2030-12-07",
+    "couponRate": 0.0475,
+    "couponMonths": [
+      12,
+      6
+    ],
+    "cleanPrice": 104.11
+  },
+  {
+    "code": "T26A",
+    "name": "0 3/8% Treasury Gilt 2026",
+    "isin": "GB00BNNGP668",
+    "maturity": "2026-10-22",
+    "couponRate": 0.00375,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 97.26
+  },
+  {
+    "code": "T26",
+    "name": "0 1/8% Treasury Gilt 2026",
+    "isin": "GB00BL68HJ26",
+    "maturity": "2026-01-30",
+    "couponRate": 0.00125,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 99.51
+  },
+  {
+    "code": "TR63",
+    "name": "4% Treasury Gilt 2063",
+    "isin": "GB00BMF9LF76",
+    "maturity": "2063-10-22",
+    "couponRate": 0.04,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 80.66
+  },
+  {
+    "code": "TR60",
+    "name": "4% Treasury Gilt 2060",
+    "isin": "GB00B54QLM75",
+    "maturity": "2060-01-22",
+    "couponRate": 0.04,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 81.64
+  },
+  {
+    "code": "TG71",
+    "name": "1 5/8% Treasury Gilt 2071",
+    "isin": "GB00BFMCN652",
+    "maturity": "2071-10-22",
+    "couponRate": 0.01625,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 40.45
+  },
+  {
+    "code": "T30",
+    "name": "4 3/8% Treasury Gilt 2030",
+    "isin": "GB00BSQNRD01",
+    "maturity": "2030-03-07",
+    "couponRate": 0.04375,
+    "couponMonths": [
+      3,
+      9
+    ],
+    "cleanPrice": 101.83
+  },
+  {
+    "code": "T31",
+    "name": "4% Treasury Gilt 2031",
+    "isin": "GB00BPSNBF73",
+    "maturity": "2031-10-22",
+    "couponRate": 0.04,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 99.73
+  },
+  {
+    "code": "T41F",
+    "name": "51/4% Treasury Gilt 2041",
+    "isin": "GB00BVP99897",
+    "maturity": "2041-01-31",
+    "couponRate": 0.0525,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 103.49
+  },
+  {
+    "code": "T34",
+    "name": "4 5/8% Treasury Gilt 2034",
+    "isin": "GB00BPJJKN53",
+    "maturity": "2034-01-31",
+    "couponRate": 0.04625,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 102.02
+  },
+  {
+    "code": "T35",
+    "name": "41/2% Treasury Gilt 2035",
+    "isin": "GB00BT7J0027",
+    "maturity": "2035-03-07",
+    "couponRate": 0.045,
+    "couponMonths": [
+      3,
+      9
+    ],
+    "cleanPrice": 100.34
+  },
+  {
+    "code": "TR54",
+    "name": "1 5/8% Treasury Gilt 2054",
+    "isin": "GB00BJLR0J16",
+    "maturity": "2054-10-22",
+    "couponRate": 0.01625,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 47.01
+  },
+  {
+    "code": "T39",
+    "name": "41/4% Treasury Gilt 2039",
+    "isin": "GB00B3KJDS62",
+    "maturity": "2039-09-07",
+    "couponRate": 0.0425,
+    "couponMonths": [
+      9,
+      3
+    ],
+    "cleanPrice": 94.42
+  },
+  {
+    "code": "TR4Q",
+    "name": "41/4% Treasury Gilt 2055",
+    "isin": "GB00B06YGN05",
+    "maturity": "2055-12-07",
+    "couponRate": 0.0425,
+    "couponMonths": [
+      12,
+      6
+    ],
+    "cleanPrice": 85.99
+  },
+  {
+    "code": "TG26",
+    "name": "11/2% Treasury Gilt 2026",
+    "isin": "GB00BYZW3G56",
+    "maturity": "2026-07-22",
+    "couponRate": 0.015,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 98.6
+  },
+  {
+    "code": "T40",
+    "name": "41/4% Treasury Gilt 2040",
+    "isin": "GB00B6460505",
+    "maturity": "2040-12-07",
+    "couponRate": 0.0425,
+    "couponMonths": [
+      12,
+      6
+    ],
+    "cleanPrice": 93.28
+  },
+  {
+    "code": "T42",
+    "name": "41/2% Treasury Gilt 2042",
+    "isin": "GB00B1VWPJ53",
+    "maturity": "2042-12-07",
+    "couponRate": 0.045,
+    "couponMonths": [
+      12,
+      6
+    ],
+    "cleanPrice": 94.45
+  },
+  {
+    "code": "T45",
+    "name": "31/2% Treasury Gilt 2045",
+    "isin": "GB00BN65R313",
+    "maturity": "2045-01-22",
+    "couponRate": 0.035,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 80.6
+  },
+  {
+    "code": "T46",
+    "name": "41/4% Treasury Gilt 2046",
+    "isin": "GB00B128DP45",
+    "maturity": "2046-12-07",
+    "couponRate": 0.0425,
+    "couponMonths": [
+      12,
+      6
+    ],
+    "cleanPrice": 88.78
+  },
+  {
+    "code": "T49",
+    "name": "41/4% Treasury Gilt 2049",
+    "isin": "GB00B39R3707",
+    "maturity": "2049-12-07",
+    "couponRate": 0.0425,
+    "couponMonths": [
+      12,
+      6
+    ],
+    "cleanPrice": 87.59
+  },
+  {
+    "code": "TG29",
+    "name": "01/2% Treasury Gilt 2029",
+    "isin": "GB00BLPK7227",
+    "maturity": "2029-01-31",
+    "couponRate": 0.005,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 90.59
+  },
+  {
+    "code": "TG28",
+    "name": "1 5/8% Treasury Gilt 2028",
+    "isin": "GB00BFX0ZL78",
+    "maturity": "2028-10-22",
+    "couponRate": 0.01625,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 94.57
+  },
+  {
+    "code": "TG27",
+    "name": "11/4% Treasury Gilt 2027",
+    "isin": "GB00BDRHNP05",
+    "maturity": "2027-07-22",
+    "couponRate": 0.0125,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 96.25
+  },
+  {
+    "code": "TR68",
+    "name": "31/2% Treasury Gilt 2068",
+    "isin": "GB00BBJNQY21",
+    "maturity": "2068-07-22",
+    "couponRate": 0.035,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 72.11
+  },
+  {
+    "code": "T27A",
+    "name": "4 1/8% Treasury Gilt 2027",
+    "isin": "GB00BL6C7720",
+    "maturity": "2027-01-29",
+    "couponRate": 0.04125,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 100.4
+  },
+  {
+    "code": "T4Q",
+    "name": "41/4% Treasury Stock 2036",
+    "isin": "GB0032452392",
+    "maturity": "2036-03-07",
+    "couponRate": 0.0425,
+    "couponMonths": [
+      3,
+      9
+    ],
+    "cleanPrice": 97.57
+  },
+  {
+    "code": "T52",
+    "name": "33/4% Treasury Gilt 2052",
+    "isin": "GB00B6RNH572",
+    "maturity": "2052-07-22",
+    "couponRate": 0.0375,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 79.52
+  },
+  {
+    "code": "T31H",
+    "name": "4 1/8% Treasury Gilt 2031",
+    "isin": "GB00BVP99673",
+    "maturity": "2031-03-07",
+    "couponRate": 0.04125,
+    "couponMonths": [
+      3,
+      9
+    ],
+    "cleanPrice": 100.49
+  },
+  {
+    "code": "T54",
+    "name": "4 3/8% Treasury Gilt 2054",
+    "isin": "GB00BPSNBB36",
+    "maturity": "2054-07-31",
+    "couponRate": 0.04375,
+    "couponMonths": [
+      7,
+      1
+    ],
+    "cleanPrice": 87.8
+  },
+  {
+    "code": "T53",
+    "name": "33/4% Treasury Gilt 2053",
+    "isin": "GB00BPCJD997",
+    "maturity": "2053-10-22",
+    "couponRate": 0.0375,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 78.75
+  },
+  {
+    "code": "T56",
+    "name": "5 3/8% Treasury Gilt 2056",
+    "isin": "GB00BT7J0241",
+    "maturity": "2056-01-31",
+    "couponRate": 0.05375,
+    "couponMonths": [
+      1,
+      7
+    ],
+    "cleanPrice": 102.9
+  },
+  {
+    "code": "TR73",
+    "name": "1 1/8% Treasury Gilt 2073",
+    "isin": "GB00BLBDX619",
+    "maturity": "2073-10-22",
+    "couponRate": 0.01125,
+    "couponMonths": [
+      10,
+      4
+    ],
+    "cleanPrice": 32.22
+  }
+]

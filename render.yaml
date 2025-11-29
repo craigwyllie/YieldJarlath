@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: gilts-backend
+    env: node
+    root: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: USERNAME
+        sync: false
+      - key: PASSWORD
+        sync: false
+      - key: PORT
+        value: 4000
+      - key: HL_GILTS_URL
+        sync: false
+
+  - type: static
+    name: gilts-frontend
+    root: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: "/*"
+        destination: "/index.html"
+    envVars:
+      - key: VITE_API_BASE
+        value: https://gilts-backend.onrender.com
