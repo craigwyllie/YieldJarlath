@@ -1,4 +1,15 @@
 require('dotenv').config();
+
+// Polyfill File for environments where undici/node-fetch expects it (Node 18 on Render may lack global File).
+if (typeof File === 'undefined' && typeof Blob !== 'undefined') {
+  global.File = class File extends Blob {
+    constructor(parts, name, options = {}) {
+      super(parts, options);
+      this.name = name;
+      this.lastModified = options.lastModified || Date.now();
+    }
+  };
+}
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
