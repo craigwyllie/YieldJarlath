@@ -77,7 +77,7 @@ export default function App() {
   useEffect(() => {
     loadData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [token]);
+  }, [token, taxRate, couponFilter, maturityFilter]);
 
   const handleSort = (field) => {
     if (field === sortField) {
@@ -220,6 +220,7 @@ export default function App() {
               </div>
             </div>
           </div>
+
         </div>
 
         {error && (
