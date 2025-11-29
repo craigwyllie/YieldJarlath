@@ -18,8 +18,9 @@ services:
       - key: HL_GILTS_URL
         sync: false
 
-  - type: static_site
+  - type: web
     name: gilts-frontend
+    env: static
     root: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
