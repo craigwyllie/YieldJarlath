@@ -2,7 +2,7 @@ services:
   - type: web
     name: gilts-backend
     env: node
-    root: backend
+    rootDir: backend
     plan: free
     buildCommand: npm install
     startCommand: node index.js
@@ -21,7 +21,7 @@ services:
   - type: web
     name: gilts-frontend
     env: static
-    root: frontend
+    rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     routes:
