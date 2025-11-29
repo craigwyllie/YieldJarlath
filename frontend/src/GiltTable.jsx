@@ -21,6 +21,10 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
     return sortDirection === 'asc' ? '▲' : '▼';
   };
 
+  const handleCardSort = (field) => {
+    if (field) onSort(field);
+  };
+
   return (
     <div className="panel space-y-4 px-6 py-6">
       <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
@@ -126,7 +130,11 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
                 <p className="font-semibold text-slate-900">Clean</p>
                 <p className="tabular-nums">{formatNumber(gilt.cleanPrice, 3)}</p>
               </div>
-              <div>
+              <div className="cursor-pointer" onClick={() => handleCardSort('grossYTM')}>
+                <p className="font-semibold text-slate-900">Gross YTM</p>
+                <p className="tabular-nums text-slate-900">{formatNumber(gilt.grossYTM, 3)}%</p>
+              </div>
+              <div className="cursor-pointer" onClick={() => handleCardSort('netYTM')}>
                 <p className="font-semibold text-slate-900">Net YTM</p>
                 <p className="tabular-nums text-emerald-700">{formatNumber(gilt.netYTM, 3)}%</p>
               </div>
