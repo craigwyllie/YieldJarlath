@@ -34,6 +34,7 @@ function loadGilts() {
 
 let gilts = loadGilts();
 let priceCache = { timestamp: null, data: {} };
+const PRICE_TTL_MS = 10 * 60 * 1000; // 10 minutes
 
 async function refreshPrices() {
   try {
@@ -62,6 +63,13 @@ async function refreshPrices() {
   }
 }
 
+async function ensurePricesFresh() {
+  const now = Date.now();
+  if (!priceCache.timestamp || now - new Date(priceCache.timestamp).getTime() > PRICE_TTL_MS) {
+    await refreshPrices();
+  }
+}
+
 async function refreshGiltsList() {
   const result = await updateGiltsList();
   gilts = loadGilts();
@@ -75,11 +83,13 @@ app.use(express.json());
 app.use(authMiddleware);
 
 app.get('/gilts', async (req, res) => {
-  // Always attempt to pull the latest gilt list before returning data.
-  try {
-    await refreshGiltsList();
-  } catch (err) {
-    console.error('Gilt list refresh failed during request:', err.message);
+  // If we have no gilts loaded, attempt a refresh; otherwise keep the cached list.
+  if (!gilts || gilts.length === 0) {
+    try {
+      await refreshGiltsList();
+    } catch (err) {
+      console.error('Initial gilt list refresh failed during request:', err.message);
+    }
   }
 
   const allowedRates = [0, 0.2, 0.4, 0.45];
@@ -88,6 +98,8 @@ app.get('/gilts', async (req, res) => {
 
   if (!priceCache.timestamp) {
     await refreshPrices();
+  } else {
+    await ensurePricesFresh();
   }
 
   const now = new Date();

@@ -39,8 +39,8 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
         </div>
       </div>
 
-      {/* Desktop / landscape table (from md up, with hidden columns for space) */}
-      <div className="rounded-2xl border border-slate-200 overflow-hidden hidden md:block">
+      {/* Desktop / landscape table (from sm up, with hidden columns for space) */}
+      <div className="rounded-2xl border border-slate-200 overflow-hidden hidden sm:block">
         <table className="w-full table-auto text-[10px] sm:text-[11px] text-slate-900">
           <thead className="bg-slate-50 text-[9px] uppercase tracking-[0.08em] text-slate-500">
             <tr>
@@ -114,8 +114,8 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
         </table>
       </div>
 
-      {/* Mobile / tablet cards (default), also used up to md screens to avoid overflow */}
-      <div className="space-y-3 md:hidden">
+      {/* Mobile cards (portrait only) */}
+      <div className="space-y-3 sm:hidden">
         {gilts.length === 0 && (
           <div className="rounded-xl border border-slate-200 bg-white px-3 py-3 text-sm text-slate-500 text-center">
             No gilts match these filters yet.
