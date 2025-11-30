@@ -1,12 +1,12 @@
 const HEADERS = [
   { key: 'code', label: 'Code', numeric: false },
   { key: 'name', label: 'Name', numeric: false },
-  { key: 'isin', label: 'ISIN', numeric: false, hiddenUntil: 'lg' },
+  { key: 'isin', label: 'ISIN', numeric: false, hiddenUntil: 'xl' },
   { key: 'maturityDisplay', label: 'Maturity', numeric: false },
-  { key: 'timeToMaturity', label: 'TTM', numeric: false, hiddenUntil: 'lg' },
+  { key: 'timeToMaturity', label: 'TTM', numeric: false, hiddenUntil: 'xl' },
   { key: 'cleanPrice', label: 'Clean', numeric: true },
   { key: 'grossYTM', label: 'Gross YTM', numeric: true },
-  { key: 'netYTM', label: 'Net YTM', numeric: true, hiddenUntil: 'xl' },
+  { key: 'netYTM', label: 'Net YTM', numeric: true },
   { key: 'couponRate', label: 'Coupon', numeric: true, hiddenUntil: 'xl' },
 ];
 
@@ -41,14 +41,14 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
 
       {/* Desktop / landscape table (from sm up, with hidden columns for space) */}
       <div className="rounded-2xl border border-slate-200 overflow-hidden hidden sm:block">
-        <table className="w-full table-auto text-[10px] sm:text-[11px] text-slate-900">
+        <table className="w-full table-fixed text-[10px] sm:text-[11px] text-slate-900">
           <thead className="bg-slate-50 text-[9px] uppercase tracking-[0.08em] text-slate-500">
             <tr>
               {HEADERS.map((h) => (
                 <th
                   key={h.key}
                   onClick={() => onSort(h.key)}
-                  className={`cursor-pointer whitespace-nowrap px-2 py-2 sm:px-3 sm:py-2.5 font-semibold hover:text-slate-900 ${
+                  className={`cursor-pointer whitespace-nowrap px-2 py-2 sm:px-2.5 sm:py-2 font-semibold hover:text-slate-900 ${
                     h.numeric ? 'text-right' : 'text-left'
                   } ${headerVisibility(h.hiddenUntil)}`}
                 >
@@ -73,37 +73,35 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
                 key={gilt.isin}
                 className={idx % 2 === 0 ? 'bg-slate-50/70 hover:bg-slate-100 transition' : 'hover:bg-slate-100 transition'}
               >
-                <td className="px-2 py-2 sm:px-2 sm:py-2.5 font-semibold text-slate-900 w-[56px] sm:w-[72px] whitespace-nowrap">
+                <td className="px-2 py-2 sm:px-2 sm:py-2 font-semibold text-slate-900 w-[56px] sm:w-[64px] whitespace-nowrap">
                   {gilt.code || '-'}
                 </td>
-                <td className="px-2 py-2 sm:px-3 sm:py-2.5">
-                  <div className="text-slate-800 leading-snug break-words">{gilt.name}</div>
+                <td className="px-2 py-2 sm:px-2.5 sm:py-2">
+                  <div className="text-slate-800 leading-snug break-words line-clamp-2">{gilt.name}</div>
                 </td>
-                <td className={`px-2 py-2 sm:px-3 sm:py-2.5 ${headerVisibility(HEADERS.find((h) => h.key === 'isin').hiddenUntil)}`}>
+                <td className={`px-2 py-2 sm:px-2.5 sm:py-2 ${headerVisibility(HEADERS.find((h) => h.key === 'isin').hiddenUntil)}`}>
                   <span className="rounded-full border border-accent-200 bg-accent-50 px-2 py-0.5 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.08em] text-accent-700">
                     {gilt.isin}
                   </span>
                 </td>
-                <td className="px-2 py-2 sm:px-3 sm:py-2.5 whitespace-nowrap text-slate-800">
+                <td className="px-2 py-2 sm:px-2.5 sm:py-2 whitespace-nowrap text-slate-800">
                   {gilt.maturityDisplay || gilt.maturity || '-'}
                 </td>
                 <td
-                  className={`px-2 py-2 sm:px-2 sm:py-2.5 whitespace-nowrap text-slate-700 w-[82px] sm:w-[96px] ${headerVisibility(
+                  className={`px-2 py-2 sm:px-2 sm:py-2 whitespace-nowrap text-slate-700 w-[70px] sm:w-[88px] ${headerVisibility(
                     HEADERS.find((h) => h.key === 'timeToMaturity').hiddenUntil
                   )}`}
                 >
                   {gilt.timeToMaturity || '-'}
                 </td>
-                <td className="px-2 py-2 sm:px-3 sm:py-2.5 text-right font-semibold text-slate-900 tabular-nums">
+                <td className="px-2 py-2 sm:px-2.5 sm:py-2 text-right font-semibold text-slate-900 tabular-nums">
                   {formatNumber(gilt.cleanPrice, 3)}
                 </td>
-                <td className="px-2 py-2 sm:px-3 sm:py-2.5 text-right tabular-nums">{formatNumber(gilt.grossYTM, 3)}%</td>
-                <td className={`px-2 py-2 sm:px-3 sm:py-2.5 text-right font-semibold text-emerald-600 tabular-nums ${headerVisibility(
-                  HEADERS.find((h) => h.key === 'netYTM').hiddenUntil
-                )}`}>
+                <td className="px-2 py-2 sm:px-2.5 sm:py-2 text-right tabular-nums">{formatNumber(gilt.grossYTM, 3)}%</td>
+                <td className="px-2 py-2 sm:px-2.5 sm:py-2 text-right font-semibold text-emerald-600 tabular-nums">
                   {formatNumber(gilt.netYTM, 3)}%
                 </td>
-                <td className={`px-2 py-2 sm:px-3 sm:py-2.5 text-right tabular-nums ${headerVisibility(
+                <td className={`px-2 py-2 sm:px-2.5 sm:py-2 text-right tabular-nums ${headerVisibility(
                   HEADERS.find((h) => h.key === 'couponRate').hiddenUntil
                 )}`}>
                   {formatNumber(gilt.couponRate * 100, 3)}%
