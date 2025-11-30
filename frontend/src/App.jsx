@@ -135,7 +135,7 @@ export default function App() {
               <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">UK Gilts Monitor</h1>
               {lastUpdated && (
                 <p className="text-xs text-slate-500">
-                  Last updated {new Date(lastUpdated).toLocaleString()}
+                  Last updated {new Date(lastUpdated).toLocaleString('en-GB')}
                 </p>
               )}
             </div>

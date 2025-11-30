@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import LogoImage from './assets/yieldjarlathlogo.png';
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState('');
@@ -26,14 +27,20 @@ export default function Login({ onLogin }) {
       </div>
 
       <div className="panel relative w-full max-w-md space-y-6 px-6 py-8">
-        <div className="space-y-2">
-          <span className="pill">Secure access</span>
-          <h1 className="text-2xl font-semibold text-white">Gilts Dashboard</h1>
-          <p className="text-sm text-slate-300">Sign in with the API credentials you set on the backend.</p>
+        <div className="flex items-center gap-3">
+          <img
+            src={LogoImage}
+            alt="Gilt monitor logo"
+            className="h-12 w-12 rounded-2xl object-cover shadow-md border border-slate-200"
+          />
+          <div>
+            <h1 className="text-2xl font-semibold text-slate-900">UK Gilts Monitor</h1>
+            <p className="pill mt-1 w-fit">Secure access</p>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <label className="flex flex-col gap-2 text-sm text-slate-300">
+          <label className="flex flex-col gap-2 text-sm text-slate-800">
             <span className="text-xs font-semibold uppercase tracking-[0.08em] text-slate-500">Username</span>
             <input
               className="input"
@@ -44,7 +51,7 @@ export default function Login({ onLogin }) {
               required
             />
           </label>
-          <label className="flex flex-col gap-2 text-sm text-slate-300">
+          <label className="flex flex-col gap-2 text-sm text-slate-800">
             <span className="text-xs font-semibold uppercase tracking-[0.08em] text-slate-500">Password</span>
             <input
               className="input"
@@ -60,7 +67,7 @@ export default function Login({ onLogin }) {
             {loading ? 'Signing in...' : 'Login'}
           </button>
           {error && (
-            <div className="rounded-xl border border-red-500/40 bg-red-500/10 px-3 py-2 text-sm text-red-100">
+            <div className="rounded-xl border border-red-500/40 bg-red-500/10 px-3 py-2 text-sm text-red-700">
               {error}
             </div>
           )}
