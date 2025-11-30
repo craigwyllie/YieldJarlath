@@ -30,6 +30,18 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
 
   const cardIndicator = (key) => (sortField === key ? (sortDirection === 'asc' ? '▲' : '▼') : '');
 
+  const cardSortProps = (key) => ({
+    role: 'button',
+    tabIndex: 0,
+    onClick: () => onSort(key),
+    onKeyDown: (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onSort(key);
+      }
+    },
+  });
+
   return (
     <div className="panel space-y-4 px-6 py-6">
       <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
@@ -122,55 +134,46 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
         {gilts.map((gilt) => (
           <div key={gilt.isin} className="rounded-xl border border-slate-200 bg-white px-3 py-3 shadow-sm">
             <div className="flex items-center justify-between gap-3">
-              <div>
-                <button
-                  type="button"
-                  className="text-sm font-semibold text-slate-900 inline-flex items-center gap-1"
-                  onClick={() => handleCardSort('code')}
-                >
+              <div className="space-y-1">
+                <div className="text-sm font-semibold text-slate-900 inline-flex items-center gap-1 cursor-pointer" {...cardSortProps('code')}>
                   {gilt.code || '-'} <span className="text-[10px]">{cardIndicator('code')}</span>
-                </button>
-                <button
-                  type="button"
-                  className="text-sm text-slate-700 leading-snug inline-flex items-center gap-1"
-                  onClick={() => handleCardSort('name')}
-                >
+                </div>
+                <div className="text-sm text-slate-700 leading-snug inline-flex items-center gap-1 cursor-pointer" {...cardSortProps('name')}>
                   {gilt.name} <span className="text-[10px]">{cardIndicator('name')}</span>
-                </button>
+                </div>
               </div>
-              <button
-                type="button"
-                className="rounded-full border border-accent-200 bg-accent-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-accent-700 inline-flex items-center gap-1"
-                onClick={() => handleCardSort('isin')}
+              <div
+                className="rounded-full border border-accent-200 bg-accent-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-accent-700 inline-flex items-center gap-1 cursor-pointer"
+                {...cardSortProps('isin')}
               >
                 {gilt.isin} <span className="text-[10px]">{cardIndicator('isin')}</span>
-              </button>
+              </div>
             </div>
             <div className="mt-2 grid grid-cols-2 gap-2 text-xs text-slate-700">
-              <button type="button" className="text-left" onClick={() => handleCardSort('maturity')}>
+              <div className="text-left cursor-pointer" {...cardSortProps('maturity')}>
                 <p className="font-semibold text-slate-900 inline-flex items-center gap-1">
                   Maturity <span className="text-[10px]">{cardIndicator('maturity')}</span>
                 </p>
                 <p>{gilt.maturityDisplay || gilt.maturity || '-'}</p>
-              </button>
-              <button type="button" className="text-left" onClick={() => handleCardSort('cleanPrice')}>
+              </div>
+              <div className="text-left cursor-pointer" {...cardSortProps('cleanPrice')}>
                 <p className="font-semibold text-slate-900 inline-flex items-center gap-1">
                   Clean <span className="text-[10px]">{cardIndicator('cleanPrice')}</span>
                 </p>
                 <p className="tabular-nums">{formatNumber(gilt.cleanPrice, 3)}</p>
-              </button>
-              <button type="button" className="text-left" onClick={() => handleCardSort('grossYTM')}>
+              </div>
+              <div className="text-left cursor-pointer" {...cardSortProps('grossYTM')}>
                 <p className="font-semibold text-slate-900 inline-flex items-center gap-1">
                   Gross YTM <span className="text-[10px]">{cardIndicator('grossYTM')}</span>
                 </p>
                 <p className="tabular-nums text-slate-900">{formatNumber(gilt.grossYTM, 3)}%</p>
-              </button>
-              <button type="button" className="text-left" onClick={() => handleCardSort('netYTM')}>
+              </div>
+              <div className="text-left cursor-pointer" {...cardSortProps('netYTM')}>
                 <p className="font-semibold text-slate-900 inline-flex items-center gap-1">
                   Net YTM <span className="text-[10px]">{cardIndicator('netYTM')}</span>
                 </p>
                 <p className="tabular-nums text-emerald-700">{formatNumber(gilt.netYTM, 3)}%</p>
-              </button>
+              </div>
             </div>
           </div>
         ))}
