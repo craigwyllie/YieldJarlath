@@ -1,10 +1,10 @@
 const HEADERS = [
   { key: 'code', label: 'Code', numeric: false },
   { key: 'name', label: 'Name', numeric: false },
-  { key: 'isin', label: 'ISIN', numeric: false, hiddenUntil: 'xl' },
+  { key: 'isin', label: 'ISIN', numeric: false, hiddenUntil: 'lg' },
   { key: 'maturityDisplay', label: 'Maturity', numeric: false },
-  { key: 'timeToMaturity', label: 'TTM', numeric: false, hiddenUntil: 'xl' },
-  { key: 'cleanPrice', label: 'Clean Price', numeric: true },
+  { key: 'timeToMaturity', label: 'TTM', numeric: false, hiddenUntil: 'lg' },
+  { key: 'cleanPrice', label: 'Clean', numeric: true },
   { key: 'grossYTM', label: 'Gross YTM', numeric: true },
   { key: 'netYTM', label: 'Net YTM', numeric: true, hiddenUntil: 'xl' },
   { key: 'couponRate', label: 'Coupon', numeric: true, hiddenUntil: 'xl' },
@@ -24,6 +24,7 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
   const headerVisibility = (hiddenUntil) => {
     if (hiddenUntil === 'xl') return 'hidden xl:table-cell';
     if (hiddenUntil === 'lg') return 'hidden lg:table-cell';
+    if (hiddenUntil === 'md') return 'hidden md:table-cell';
     return '';
   };
 
@@ -38,10 +39,10 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
         </div>
       </div>
 
-      {/* Desktop table (wide screens only) */}
-      <div className="rounded-2xl border border-slate-200 overflow-hidden hidden xl:block">
-        <table className="w-full table-auto text-[11px] sm:text-sm text-slate-900">
-          <thead className="bg-slate-50 text-[9px] sm:text-[10px] uppercase tracking-[0.08em] text-slate-500">
+      {/* Desktop / landscape table (from md up, with hidden columns for space) */}
+      <div className="rounded-2xl border border-slate-200 overflow-hidden hidden md:block">
+        <table className="w-full table-auto text-[10px] sm:text-[11px] text-slate-900">
+          <thead className="bg-slate-50 text-[9px] uppercase tracking-[0.08em] text-slate-500">
             <tr>
               {HEADERS.map((h) => (
                 <th
@@ -113,8 +114,8 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
         </table>
       </div>
 
-      {/* Mobile / tablet cards (default), also used up to xl screens to avoid overflow */}
-      <div className="space-y-3 xl:hidden">
+      {/* Mobile / tablet cards (default), also used up to md screens to avoid overflow */}
+      <div className="space-y-3 md:hidden">
         {gilts.length === 0 && (
           <div className="rounded-xl border border-slate-200 bg-white px-3 py-3 text-sm text-slate-500 text-center">
             No gilts match these filters yet.
@@ -171,12 +172,6 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
                   Net YTM <span className="text-[10px]">{cardIndicator('netYTM')}</span>
                 </p>
                 <p className="tabular-nums text-emerald-700">{formatNumber(gilt.netYTM, 3)}%</p>
-              </button>
-              <button type="button" className="text-left" onClick={() => handleCardSort('couponRate')}>
-                <p className="font-semibold text-slate-900 inline-flex items-center gap-1">
-                  Coupon <span className="text-[10px]">{cardIndicator('couponRate')}</span>
-                </p>
-                <p className="tabular-nums">{formatNumber(gilt.couponRate * 100, 3)}%</p>
               </button>
             </div>
           </div>
