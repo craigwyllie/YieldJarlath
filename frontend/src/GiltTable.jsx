@@ -47,10 +47,10 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
   const widthHints = useMemo(() => {
     const limits = {
       code: { min: 4, max: 8 },
-      name: { min: 18, max: 40 },
-      isin: { min: 12, max: 16 },
-      maturityDisplay: { min: 9, max: 12 },
-      timeToMaturity: { min: 6, max: 10 },
+      name: { min: 20, max: 40 },
+      isin: { min: 16, max: 20 },
+      maturityDisplay: { min: 14, max: 18 },
+      timeToMaturity: { min: 9, max: 12 },
       cleanPrice: { min: 8, max: 10 },
       grossYTM: { min: 8, max: 10 },
       netYTM: { min: 8, max: 10 },
@@ -103,10 +103,14 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
 
       {/* Desktop / landscape table (from sm up, with hidden columns for space) */}
       <div className="rounded-2xl border border-slate-200 overflow-hidden hidden sm:block">
-        <table className="w-full table-fixed text-[10px] sm:text-[11px] text-slate-900">
+        <table className="w-full table-auto text-[10px] sm:text-[11px] text-slate-900">
           <colgroup>
             {HEADERS.map((h) => (
-              <col key={h.key} style={{ width: widthHints[h.key] || 'auto' }} className={headerVisibility(h.hiddenUntil)} />
+              <col
+                key={h.key}
+                style={{ width: widthHints[h.key] || 'auto', minWidth: widthHints[h.key] || undefined }}
+                className={headerVisibility(h.hiddenUntil)}
+              />
             ))}
           </colgroup>
           <thead className="bg-slate-50 text-[9px] uppercase tracking-[0.08em] text-slate-500">
