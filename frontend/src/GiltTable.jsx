@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 const HEADERS = [
   { key: 'code', label: 'Code', numeric: false },
   { key: 'name', label: 'Name', numeric: false },
@@ -42,6 +44,54 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
     },
   });
 
+  const widthHints = useMemo(() => {
+    const limits = {
+      code: { min: 4, max: 8 },
+      name: { min: 18, max: 40 },
+      isin: { min: 12, max: 16 },
+      maturityDisplay: { min: 9, max: 12 },
+      timeToMaturity: { min: 6, max: 10 },
+      cleanPrice: { min: 8, max: 10 },
+      grossYTM: { min: 8, max: 10 },
+      netYTM: { min: 8, max: 10 },
+      couponRate: { min: 8, max: 10 },
+    };
+
+    const valueFor = (gilt, key) => {
+      switch (key) {
+        case 'code':
+          return gilt.code || '';
+        case 'name':
+          return gilt.name || '';
+        case 'isin':
+          return gilt.isin || '';
+        case 'maturityDisplay':
+          return gilt.maturityDisplay || gilt.maturity || '';
+        case 'timeToMaturity':
+          return gilt.timeToMaturity || '';
+        case 'cleanPrice':
+          return formatNumber(gilt.cleanPrice, 3);
+        case 'grossYTM':
+          return `${formatNumber(gilt.grossYTM, 3)}%`;
+        case 'netYTM':
+          return `${formatNumber(gilt.netYTM, 3)}%`;
+        case 'couponRate':
+          return `${formatNumber(gilt.couponRate * 100, 3)}%`;
+        default:
+          return '';
+      }
+    };
+
+    const widths = {};
+    HEADERS.forEach((h) => {
+      const maxLen = Math.max(h.label.length, ...gilts.map((g) => String(valueFor(g, h.key)).length));
+      const min = limits[h.key]?.min ?? 6;
+      const max = limits[h.key]?.max ?? 20;
+      widths[h.key] = `${Math.min(Math.max(maxLen + 1, min), max)}ch`;
+    });
+    return widths;
+  }, [gilts]);
+
   return (
     <div className="panel space-y-4 px-6 py-6">
       <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
@@ -54,6 +104,11 @@ export default function GiltTable({ gilts, sortField, sortDirection, onSort }) {
       {/* Desktop / landscape table (from sm up, with hidden columns for space) */}
       <div className="rounded-2xl border border-slate-200 overflow-hidden hidden sm:block">
         <table className="w-full table-fixed text-[10px] sm:text-[11px] text-slate-900">
+          <colgroup>
+            {HEADERS.map((h) => (
+              <col key={h.key} style={{ width: widthHints[h.key] || 'auto' }} className={headerVisibility(h.hiddenUntil)} />
+            ))}
+          </colgroup>
           <thead className="bg-slate-50 text-[9px] uppercase tracking-[0.08em] text-slate-500">
             <tr>
               {HEADERS.map((h) => (
